@@ -6,14 +6,9 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 12:26:50 by rceschel          #+#    #+#             */
-/*   Updated: 2025/02/26 14:57:34 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:52:04 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-	Questo header e' qui per non essere costretto a cambiare i nomi 
-	in tutte le funzioni che lo richiamano
-*/
 
 #ifndef FT_LIB_H
 # define FT_LIB_H
@@ -33,6 +28,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_isspace(int c);
 
 /*FT_MEM*/
 void				ft_bzero(void *s, unsigned long n);

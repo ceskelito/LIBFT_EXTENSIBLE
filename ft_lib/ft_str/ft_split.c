@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 11:06:37 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/04 10:46:45 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:51:00 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,22 @@ void	*free_all(char **s, int *a, int *b)
 	return (NULL);
 }
 
+// char	**single_char_split(const char *s)
+// {
+// 	char	**splitted;
+// 	int		w_count;
+// 	int 	w_num;
+
+// 	w_count = ft_strlen(s);
+// 	splitted = ft_calloc((w_count + 1), sizeof(char *));
+// 	if(!splitted)
+// 		return (NULL);
+// 	w_num = 0;
+// 	while(w_num < w_count)
+// 		splitted[w_num] = s[w_num];
+// 	return (splitted);
+// }
+
 char	**ft_split(const char *s, char c)
 {
 	char	**splitted;
@@ -71,6 +87,8 @@ char	**ft_split(const char *s, char c)
 	int		w_count;
 	int		w_num;
 
+	// if(c == '\0')
+	// 	return(single_char_split(s));
 	w_count = count_word(s, c);
 	splitted = ft_calloc((w_count + 1), sizeof(char *));
 	w_start = malloc(w_count * sizeof(int));

@@ -7,7 +7,7 @@ RM 			= rm -f
 MKDIR 		= mkdir -p
 OBJS_DIR 	= objs
 
-FT_IS 	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c
+FT_IS 	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_isspace.c
 		
 FT_LST 	= ft_lstadd_back.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstsize.c \
 		ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c ft_lstnew.c
