@@ -60,12 +60,12 @@ char	*ft_itoa(int n)
 int	main(int ac, char **av)
 {
 
-    if(ac != 2)
-    {   
-        printf("Numero argomenti errato!\n");
-        return (1);
-    }   
-        
-    printf("%s\n", ft_itoa(atoi(av[1])));
-    return (0);
+	if(ac != 2)
+	{
+		printf("Numero argomenti errato!\n");
+		return (1);
+	}
+
+	printf("%s\n", ft_itoa(atoi(av[1])));
+	return (0);
 }*/

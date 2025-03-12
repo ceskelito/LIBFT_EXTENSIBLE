@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 12:26:50 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/04 15:52:04 by rceschel         ###   ########.fr       */
+/*   Created: 2025/03/12 15:42:23 by rceschel          #+#    #+#             */
+/*   Updated: 2025/03/12 15:43:57 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ size_t				ft_strlcpy(char *dest, const char *src, size_t size);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strjoin_multi(int num, ...);
 
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
@@ -61,6 +63,7 @@ char				**ft_split(char const *s, char c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
+long int			ft_atol(const char *str);
 char				*ft_itoa(int n);
 
 /*FT_PUT*/
