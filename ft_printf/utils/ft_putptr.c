@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:52:24 by rceschel          #+#    #+#             */
-/*   Updated: 2025/01/04 17:00:49 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "ft_printf.h"
 
 int	ft_putptr(unsigned long n, int count)
 {
