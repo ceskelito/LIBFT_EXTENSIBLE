@@ -1,21 +1,22 @@
+include common_variables.mk
+
+include ft_lib/ft_lib.var.mk
+include ft_printf/ft_printf.var.mk
+include get_next_line/get_next_line.var.mk
+
 NAME        = libft.a
-
-CC          = cc
-AR          = ar rcs
-RM          = rm -f
-MKDIR       = mkdir -p
-
-CFLAGS      = -Wall -Werror -Wextra
 
 SUBPROJECTS = ft_lib ft_printf get_next_line
 
-OBJS = $(foreach dir, $(SUBPROJECTS), $(wildcard $(dir)/objs/*.o))
+OBJS = ft_lib/$(FTLIB_OBJS) ft_printf/$(PF_OBJS) get_next_line/$(GNL_OBJS)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) | $(SUBPROJECTS)
+$(NAME): $(OBJS)
 	@echo "==> Collecting objects and building $(NAME)"
 	$(AR) $@ $(OBJS)
+
+$(OBJS): $(SUBPROJECTS)
 
 $(SUBPROJECTS):
 	@$(MAKE) -C $@ objects

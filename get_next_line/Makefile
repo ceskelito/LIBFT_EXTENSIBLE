@@ -1,14 +1,8 @@
-NAME = libgnl.a
-OBJS_DIR = objs
+include ../common_variables.mk
+include get_next_line.var.mk
 
-CC = cc
-AR = ar rcs
-RM = rm -f
-MKDIR = mkdir -p
-
-CFLAGS = -Wall -Wextra -Werror
-
-OBJ = $(OBJS_DIR)/get_next_line.o
+OBJS_DIR	= GNL_OBJS_DIR
+OBJ			= GNL_OBJS
 
 vpath %.c .
 
