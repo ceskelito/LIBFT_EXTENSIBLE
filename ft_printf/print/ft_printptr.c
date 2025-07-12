@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:57:18 by rceschel          #+#    #+#             */
-/*   Updated: 2025/01/04 16:58:46 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../printf.h"
+#include "ft_printf.h"
 
 int	ft_printptr(void *p)
 {
