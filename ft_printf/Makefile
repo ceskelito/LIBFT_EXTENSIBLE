@@ -12,7 +12,7 @@ OBJS = $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.c=.o)))
 vpath %.c $(sort $(dir $(SRCS)))
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -I. -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OBJS_DIR):
 	$(MKDIR) $(OBJS_DIR)
