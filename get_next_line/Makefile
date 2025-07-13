@@ -1,27 +1,31 @@
 include ../common_variables.mk
 include var.mk
 
+NAME		= libgnl.a
 OBJS_DIR	= $(GNL_OBJS_DIR)
-OBJ			= $(GNL_OBJS)
+OBJS		= $(GNL_OBJS)
 
 vpath %.c .
 
-$(OBJS_DIR)/%.o: %.c
-	@$(MKDIR) $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-$(NAME): $(OBJ)
+$(OBJS_DIR):
+	$(MKDIR) $(OBJS_DIR)
+
+$(NAME): $(OBJS)
 	$(AR) $@ $^
 
 all: $(NAME)
 
-objects: $(OBJ)
+objects: $(OBJS)
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) -r $(OBJS_DIR)
 
 re: fclean all
 

@@ -12,7 +12,7 @@ OBJS		= $(addprefix ft_lib/, $(FTLIB_OBJS)) \
 			
 SUBPROJECTS	= $(patsubst %/objs/, %, $(sort $(dir $(OBJS))))
 
-all: debug $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@echo "==> Collecting objects and building $(NAME)"
@@ -26,6 +26,7 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	@$(foreach dir, $(SUBPROJECTS), $(MAKE) fclean -C $(dir);)
 
 re: fclean all
 

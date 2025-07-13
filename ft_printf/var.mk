@@ -7,7 +7,8 @@ PF_UTILS_SRCS = ft_count_digit_base.c ft_putnbr_fd.c	\
 			ft_putnbr_hex.c ft_putunbr.c	\
 			ft_putptr.c 
 
-PF_SRCS	= 	$(addprefix print/, $(PF_PRINT_SRCS)) \
+PF_SRCS	= 	ft_printf.c \
+			$(addprefix print/, $(PF_PRINT_SRCS)) \
 			$(addprefix utils/, $(PF_UTILS_SRCS))
 
 PF_OBJS = $(addprefix $(PF_OBJS_DIR)/, $(notdir $(PF_SRCS:.c=.o)))
