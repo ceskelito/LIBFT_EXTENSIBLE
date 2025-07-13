@@ -1,8 +1,8 @@
 include ../common_variables.mk
-include get_next_line.var.mk
+include var.mk
 
-OBJS_DIR	= GNL_OBJS_DIR
-OBJ			= GNL_OBJS
+OBJS_DIR	= $(GNL_OBJS_DIR)
+OBJ			= $(GNL_OBJS)
 
 vpath %.c .
 

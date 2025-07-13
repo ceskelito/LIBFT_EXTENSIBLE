@@ -1,10 +1,10 @@
 include ../common_variables.mk
-include ft_lib.var.mk
+include var.mk
 
 NAME 		= libftlib.a
 
-OBJS_DIR	= FTLIB_OBJS_DIR
-OBJS		= FTLIB_OBJS
+OBJS_DIR	= $(FTLIB_OBJS_DIR)
+OBJS		= $(FTLIB_OBJS)
 
 # Setting the sources path
 vpath %.c $(sort $(dir $(FTLIB_SRCS)))

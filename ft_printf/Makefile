@@ -1,5 +1,5 @@
 include ../common_variables.mk
-include ft_printf.var.mk
+include var.mk
 
 NAME = libftprintf.a
 
