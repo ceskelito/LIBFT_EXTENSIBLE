@@ -5,16 +5,17 @@ NAME = libftprintf.a
 
 OBJS_DIR = $(PF_OBJS_DIR)
 
-SRCS	= 	$(addprefix print/, $(PF_PRINT_SRCS)) \
-			$(addprefix utils/, $(PF_UTILS_SRCS))
+SRCS	= 	$(PF_SRCS)
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.c=.o)))
 
 vpath %.c $(sort $(dir $(SRCS)))
 
-$(OBJS_DIR)/%.o: %.c
-	$(MKDIR) $(dir $@)
-	$(CC) $(CFLAGS) -I. -c $< -o $@
+$(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -I. -c $< -o $@
+
+$(OBJS_DIR):
+	$(MKDIR) $(OBJS_DIR)
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
@@ -28,6 +29,7 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) -r $(OBJS_DIR)
 
 re: fclean all
 
