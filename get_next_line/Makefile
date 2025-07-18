@@ -1,5 +1,5 @@
-include ../common_variables.mk
-include var.mk
+include ../mk.common_variables/Makefile
+include mk.var/Makefile
 
 NAME		= libgnl.a
 OBJS_DIR	= $(GNL_OBJS_DIR)

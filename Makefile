@@ -1,8 +1,8 @@
-include common_variables.mk
+include mk.common_variables/Makefile
 
-include ft_lib/var.mk
-include ft_printf/var.mk
-include get_next_line/var.mk
+include ft_lib/mk.var/Makefile
+include ft_printf/mk.var/Makefile
+include get_next_line/mk.var/Makefile
 
 NAME		= libft.a
 
