@@ -1,0 +1,611 @@
+.TH LIBFT 3 "2024" "libft" "Library Functions Manual"
+.SH NAME
+libft \- extensible C library providing string manipulation, memory operations, character classification, printf implementation, and line reading functionality
+
+.SH SYNOPSIS
+.nf
+.B #include <libft.h>
+
+.BI "Link with " -lft
+
+.B /* Character classification functions */
+.BI "int ft_isalpha(int " c );
+.BI "int ft_isdigit(int " c );
+.BI "int ft_isalnum(int " c );
+.BI "int ft_isascii(int " c );
+.BI "int ft_isprint(int " c );
+.BI "int ft_isspace(int " c );
+
+.B /* Memory manipulation functions */
+.BI "void *ft_memset(void *" s ", int " c ", size_t " n );
+.BI "void ft_bzero(void *" s ", size_t " n );
+.BI "void *ft_memcpy(void *" dest ", const void *" src ", size_t " n );
+.BI "void *ft_memmove(void *" dest ", const void *" src ", size_t " n );
+.BI "void *ft_memchr(const void *" s ", int " c ", size_t " n );
+.BI "int ft_memcmp(const void *" s1 ", const void *" s2 ", size_t " n );
+.BI "void *ft_calloc(size_t " nmemb ", size_t " size );
+
+.B /* String manipulation functions */
+.BI "int ft_strlen(const char *" s );
+.BI "size_t ft_strlcpy(char *" dest ", const char *" src ", size_t " size );
+.BI "size_t ft_strlcat(char *" dest ", const char *" src ", size_t " size );
+.BI "int ft_strncmp(const char *" s1 ", const char *" s2 ", size_t " n );
+.BI "int ft_strcmp(const char *" s1 ", const char *" s2 );
+.BI "char *ft_strchr(const char *" s ", int " c );
+.BI "char *ft_strrchr(const char *" s ", int " c );
+.BI "char *ft_strnstr(const char *" big ", const char *" little ", size_t " len );
+.BI "char *ft_strdup(const char *" s );
+.BI "char *ft_substr(const char *" s ", unsigned int " start ", size_t " len );
+.BI "char *ft_strjoin(const char *" s1 ", const char *" s2 );
+.BI "char *ft_strjoin_multi(int " num ", ...);
+.BI "char *ft_strtrim(const char *" s1 ", const char *" set );
+.BI "char **ft_split(const char *" s ", char " c );
+.BI "char *ft_strmapi(const char *" s ", char (*" f ")(unsigned int, char));
+.BI "void ft_striteri(char *" s ", void (*" f ")(unsigned int, char *));
+
+.B /* Character conversion functions */
+.BI "int ft_toupper(int " c );
+.BI "int ft_tolower(int " c );
+.BI "int ft_atoi(const char *" str );
+.BI "long int ft_atol(const char *" str );
+.BI "char *ft_itoa(int " n );
+
+.B /* Output functions */
+.BI "void ft_putchar_fd(char " c ", int " fd );
+.BI "void ft_putstr_fd(char *" s ", int " fd );
+.BI "void ft_putendl_fd(char *" s ", int " fd );
+.BI "void ft_putnbr_fd(int " n ", int " fd );
+
+.B /* Linked list functions */
+.BI "t_list *ft_lstnew(void *" content );
+.BI "void ft_lstadd_front(t_list **" lst ", t_list *" new );
+.BI "int ft_lstsize(t_list *" lst );
+.BI "t_list *ft_lstlast(t_list *" lst );
+.BI "void ft_lstadd_back(t_list **" lst ", t_list *" new );
+.BI "void ft_lstdelone(t_list *" lst ", void (*" del ")(void *));
+.BI "void ft_lstclear(t_list **" lst ", void (*" del ")(void *));
+.BI "void ft_lstiter(t_list *" lst ", void (*" f ")(void *));
+.BI "t_list *ft_lstmap(t_list *" lst ", void *(*" f ")(void *), void (*" del ")(void *));
+
+.B /* Printf implementation */
+.BI "int ft_printf(const char *" format ", ...);
+
+.B /* Line reading function */
+.BI "char *get_next_line(int " fd );
+
+.fi
+
+.SH DESCRIPTION
+The
+.B libft
+library is an extensible C library that provides a comprehensive set of utility functions for string manipulation, memory operations, character classification, formatted output, and line reading. It consists of three main components:
+
+.SS Core Library Functions (ft_lib)
+
+.B Character Classification Functions
+.br
+The character classification functions test whether a character belongs to a particular class.
+
+.TP
+.BI ft_isalpha( c )
+Tests if
+.I c
+is an alphabetic character (a-z, A-Z).
+
+.TP
+.BI ft_isdigit( c )
+Tests if
+.I c
+is a decimal digit (0-9).
+
+.TP
+.BI ft_isalnum( c )
+Tests if
+.I c
+is alphanumeric (alphabetic or digit).
+
+.TP
+.BI ft_isascii( c )
+Tests if
+.I c
+is a valid ASCII character (0-127).
+
+.TP
+.BI ft_isprint( c )
+Tests if
+.I c
+is a printable character.
+
+.TP
+.BI ft_isspace( c )
+Tests if
+.I c
+is a whitespace character.
+
+.B Memory Manipulation Functions
+.br
+These functions operate on memory regions.
+
+.TP
+.BI ft_memset( s ", " c ", " n )
+Fills the first
+.I n
+bytes of memory area
+.I s
+with the constant byte
+.IR c .
+
+.TP
+.BI ft_bzero( s ", " n )
+Sets the first
+.I n
+bytes of memory area
+.I s
+to zero.
+
+.TP
+.BI ft_memcpy( dest ", " src ", " n )
+Copies
+.I n
+bytes from memory area
+.I src
+to memory area
+.IR dest .
+
+.TP
+.BI ft_memmove( dest ", " src ", " n )
+Copies
+.I n
+bytes from memory area
+.I src
+to memory area
+.IR dest ,
+handling overlapping memory areas correctly.
+
+.TP
+.BI ft_memchr( s ", " c ", " n )
+Scans the initial
+.I n
+bytes of memory area
+.I s
+for the first instance of
+.IR c .
+
+.TP
+.BI ft_memcmp( s1 ", " s2 ", " n )
+Compares the first
+.I n
+bytes of memory areas
+.I s1
+and
+.IR s2 .
+
+.TP
+.BI ft_calloc( nmemb ", " size )
+Allocates memory for an array of
+.I nmemb
+elements of
+.I size
+bytes each and initializes all bytes to zero.
+
+.B String Manipulation Functions
+.br
+These functions operate on null-terminated strings.
+
+.TP
+.BI ft_strlen( s )
+Calculates the length of string
+.IR s .
+
+.TP
+.BI ft_strlcpy( dest ", " src ", " size )
+Copies up to
+.I size
+- 1 characters from string
+.I src
+to
+.IR dest ,
+null-terminating the result.
+
+.TP
+.BI ft_strlcat( dest ", " src ", " size )
+Appends string
+.I src
+to the end of
+.IR dest ,
+ensuring the result is null-terminated and does not exceed
+.I size
+bytes.
+
+.TP
+.BI ft_strncmp( s1 ", " s2 ", " n )
+Compares at most the first
+.I n
+bytes of strings
+.I s1
+and
+.IR s2 .
+
+.TP
+.BI ft_strcmp( s1 ", " s2 )
+Compares strings
+.I s1
+and
+.IR s2 .
+
+.TP
+.BI ft_strchr( s ", " c )
+Locates the first occurrence of character
+.I c
+in string
+.IR s .
+
+.TP
+.BI ft_strrchr( s ", " c )
+Locates the last occurrence of character
+.I c
+in string
+.IR s .
+
+.TP
+.BI ft_strnstr( big ", " little ", " len )
+Locates the first occurrence of string
+.I little
+in string
+.IR big ,
+searching at most
+.I len
+characters.
+
+.TP
+.BI ft_strdup( s )
+Returns a pointer to a new string which is a duplicate of string
+.IR s .
+
+.TP
+.BI ft_substr( s ", " start ", " len )
+Returns a substring of string
+.I s
+starting at index
+.I start
+and spanning at most
+.I len
+characters.
+
+.TP
+.BI ft_strjoin( s1 ", " s2 )
+Returns a new string which is the result of concatenating
+.I s1
+and
+.IR s2 .
+
+.TP
+.BI ft_strjoin_multi( num ", " ... )
+Joins
+.I num
+strings together, passed as variable arguments.
+
+.TP
+.BI ft_strtrim( s1 ", " set )
+Returns a copy of string
+.I s1
+with characters in
+.I set
+removed from the beginning and end.
+
+.TP
+.BI ft_split( s ", " c )
+Returns an array of strings obtained by splitting
+.I s
+using character
+.I c
+as delimiter.
+
+.TP
+.BI ft_strmapi( s ", " f )
+Applies function
+.I f
+to each character of string
+.I s
+to create a new string.
+
+.TP
+.BI ft_striteri( s ", " f )
+Applies function
+.I f
+to each character of string
+.I s
+with its index.
+
+.B Character Conversion Functions
+
+.TP
+.BI ft_toupper( c )
+Converts lowercase letter
+.I c
+to uppercase.
+
+.TP
+.BI ft_tolower( c )
+Converts uppercase letter
+.I c
+to lowercase.
+
+.TP
+.BI ft_atoi( str )
+Converts string
+.I str
+to integer.
+
+.TP
+.BI ft_atol( str )
+Converts string
+.I str
+to long integer.
+
+.TP
+.BI ft_itoa( n )
+Converts integer
+.I n
+to string.
+
+.B Output Functions
+
+.TP
+.BI ft_putchar_fd( c ", " fd )
+Outputs character
+.I c
+to file descriptor
+.IR fd .
+
+.TP
+.BI ft_putstr_fd( s ", " fd )
+Outputs string
+.I s
+to file descriptor
+.IR fd .
+
+.TP
+.BI ft_putendl_fd( s ", " fd )
+Outputs string
+.I s
+to file descriptor
+.I fd
+followed by a newline.
+
+.TP
+.BI ft_putnbr_fd( n ", " fd )
+Outputs integer
+.I n
+to file descriptor
+.IR fd .
+
+.B Linked List Functions
+.br
+These functions operate on singly linked lists using the t_list structure.
+
+.TP
+.BI ft_lstnew( content )
+Creates a new list element with
+.I content
+as data.
+
+.TP
+.BI ft_lstadd_front( lst ", " new )
+Adds element
+.I new
+at the beginning of list
+.IR lst .
+
+.TP
+.BI ft_lstsize( lst )
+Counts the number of elements in list
+.IR lst .
+
+.TP
+.BI ft_lstlast( lst )
+Returns the last element of list
+.IR lst .
+
+.TP
+.BI ft_lstadd_back( lst ", " new )
+Adds element
+.I new
+at the end of list
+.IR lst .
+
+.TP
+.BI ft_lstdelone( lst ", " del )
+Deletes and frees element
+.I lst
+using function
+.I del
+to free content.
+
+.TP
+.BI ft_lstclear( lst ", " del )
+Deletes and frees list
+.I lst
+and all its elements using function
+.I del
+.
+
+.TP
+.BI ft_lstiter( lst ", " f )
+Iterates over list
+.I lst
+and applies function
+.I f
+to each element's content.
+
+.TP
+.BI ft_lstmap( lst ", " f ", " del )
+Creates a new list by applying function
+.I f
+to each element of
+.IR lst .
+Uses
+.I del
+to clean up if allocation fails.
+
+.SS Printf Implementation (ft_printf)
+
+.TP
+.BI ft_printf( format ", " ... )
+Produces output according to a format string. Supports format specifiers: %c (character), %s (string), %p (pointer), %d and %i (signed decimal), %u (unsigned decimal), %x (lowercase hexadecimal), %X (uppercase hexadecimal), and %% (literal %).
+
+.SS Line Reading Function (get_next_line)
+
+.TP
+.BI get_next_line( fd )
+Reads a line from file descriptor
+.I fd
+and returns it. Each call returns the next line from the file. Returns NULL when end of file is reached or on error.
+
+.SH RETURN VALUE
+
+.B Character Classification Functions
+.br
+Return non-zero if the character belongs to the tested class, 0 otherwise.
+
+.B Memory Functions
+.br
+.IR ft_memset() ,
+.IR ft_memcpy() ,
+.IR ft_memmove()
+return a pointer to the destination memory area.
+.IR ft_memchr()
+returns a pointer to the matched byte or NULL if not found.
+.IR ft_memcmp()
+returns an integer less than, equal to, or greater than zero.
+.IR ft_calloc()
+returns a pointer to allocated memory or NULL on failure.
+
+.B String Functions
+.br
+.IR ft_strlen()
+returns the length of the string.
+.IR ft_strlcpy()
+and
+.IR ft_strlcat()
+return the total length of the string created.
+.IR ft_strncmp()
+and
+.IR ft_strcmp()
+return an integer less than, equal to, or greater than zero.
+.IR ft_strchr() ,
+.IR ft_strrchr() ,
+.IR ft_strnstr()
+return a pointer to the matched character/substring or NULL.
+String creation functions return a pointer to the new string or NULL on allocation failure.
+
+.B Conversion Functions
+.br
+.IR ft_toupper()
+and
+.IR ft_tolower()
+return the converted character.
+.IR ft_atoi()
+returns the converted integer value.
+.IR ft_atol()
+returns the converted long integer value.
+.IR ft_itoa()
+returns a pointer to the string representation or NULL on allocation failure.
+
+.B List Functions
+.br
+.IR ft_lstnew()
+returns a pointer to the new element or NULL on allocation failure.
+.IR ft_lstsize()
+returns the number of elements.
+.IR ft_lstlast()
+returns a pointer to the last element or NULL if list is empty.
+.IR ft_lstmap()
+returns a pointer to the new list or NULL on allocation failure.
+
+.B Printf Function
+.br
+.IR ft_printf()
+returns the number of characters printed.
+
+.B Line Reading Function
+.br
+.IR get_next_line()
+returns a pointer to the read line or NULL on end of file or error.
+
+.SH ERRORS
+Functions that allocate memory (ft_calloc, ft_strdup, ft_substr, ft_strjoin, ft_strtrim, ft_split, ft_itoa, ft_lstnew, ft_lstmap, get_next_line) may fail and return NULL if memory allocation fails.
+
+.IR get_next_line()
+returns NULL if fd is invalid (< 0 or > 1024) or if BUFFER_SIZE <= 0.
+
+Functions that take string pointers may exhibit undefined behavior if passed NULL pointers, except where explicitly documented.
+
+.SH EXAMPLES
+
+.B Character classification:
+.nf
+if (ft_isdigit('5'))
+    printf("'5' is a digit\\n");
+.fi
+
+.B Memory operations:
+.nf
+char buffer[10];
+ft_memset(buffer, 'A', 10);
+char *ptr = ft_calloc(5, sizeof(int));
+.fi
+
+.B String manipulation:
+.nf
+char *str = ft_strdup("Hello");
+char *joined = ft_strjoin(str, " World");
+char **words = ft_split("apple,banana,orange", ',');
+.fi
+
+.B Linked lists:
+.nf
+t_list *node = ft_lstnew("data");
+ft_lstadd_front(&list, node);
+int size = ft_lstsize(list);
+.fi
+
+.B Printf usage:
+.nf
+ft_printf("Number: %d, String: %s\\n", 42, "test");
+.fi
+
+.B Line reading:
+.nf
+int fd = open("file.txt", O_RDONLY);
+char *line;
+while ((line = get_next_line(fd)) != NULL) {
+    printf("%s", line);
+    free(line);
+}
+.fi
+
+.SH SEE ALSO
+.BR printf (3),
+.BR string (3),
+.BR malloc (3),
+.BR strlen (3),
+.BR memcpy (3),
+.BR strcpy (3),
+.BR read (2)
+
+.SH AUTHORS
+Written by rceschel and ceskelito.
+
+.SH NOTES
+This library is designed to be a comprehensive replacement for many standard C library functions with additional utility functions. The get_next_line function is particularly useful for reading files line by line efficiently.
+
+When using the library, ensure to link with -lft and include the appropriate headers.
+
+The linked list implementation uses a simple singly-linked list structure defined as:
+.nf
+typedef struct s_list {
+    void *content;
+    struct s_list *next;
+} t_list;
+.fi
