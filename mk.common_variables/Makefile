@@ -6,3 +6,4 @@ RM 			= rm -f
 MKDIR 		= mkdir -p
 CFLAGS 		= -Wall -Werror -Wextra
 INCLUDES	= -I$(ROOT)/headers
+
