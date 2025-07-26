@@ -1,4 +1,4 @@
-include mk.common_variables/Makefile
+include mk.var.local/Makefile
 
 include ft_lib/mk.var/Makefile
 include ft_printf/mk.var/Makefile

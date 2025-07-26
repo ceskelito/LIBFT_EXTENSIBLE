@@ -1,4 +1,4 @@
-include ../mk.common_variables/Makefile
+include ../mk.var.local/Makefile
 include mk.var/Makefile  
 
 NAME = libftprintf.a
