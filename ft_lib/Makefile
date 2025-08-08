@@ -10,7 +10,8 @@ OBJS		= $(FTLIB_OBJS)
 vpath %.c $(sort $(dir $(FTLIB_SRCS)))
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@printf "$(GREEN)Compiling $(BLUE)$<$(RESET)\n"
 
 $(OBJS_DIR):
 	$(MKDIR) $(OBJS_DIR)
@@ -23,11 +24,13 @@ all: $(NAME)
 objects: $(OBJS)
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
+	@printf "$(RED)Cleaning objects of $(BLUE)$(NAME)$(RESET)\n"
 
 fclean: clean
-	$(RM) $(NAME)
-	$(RM) -r $(OBJS_DIR)
+	@$(RM) $(NAME)
+	@$(RM) -r $(OBJS_DIR)
+	@printf "$(RED)Deliting $(BLUE)$(NAME)$(RESET)\n"
 
 re: fclean all
 

@@ -15,8 +15,9 @@ SUBPROJECTS	= $(patsubst %/objs/, %, $(sort $(dir $(OBJS))))
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "==> Collecting objects and building $(NAME)"
-	$(AR) $@ $(OBJS)
+	@echo "$(GREEN)\n==> Collecting objects and building $(BLUE)$(NAME)\n\n$(RESET)"
+	@$(AR) $@ $(OBJS)
+	@echo "$(GREEN)== $(NAME) created successfully ==\n\n$(RESET)"
 
 $(OBJS):
 	$(foreach dir, $(SUBPROJECTS), $(MAKE) objects -C $(dir);)
@@ -25,7 +26,8 @@ clean:
 	@$(foreach dir, $(SUBPROJECTS), $(MAKE) clean -C $(dir);)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "$(RED)\n==> Removing $(BLUE)$(NAME)$(RESET)"
 	@$(foreach dir, $(SUBPROJECTS), $(MAKE) fclean -C $(dir);)
 
 re: fclean all
