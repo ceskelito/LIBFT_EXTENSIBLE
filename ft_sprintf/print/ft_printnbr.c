@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:53:54 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:22:28 by ceskelito        ###   ########.fr       */
+/*   Created: 2025/01/04 16:26:11 by rceschel          #+#    #+#             */
+/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_sprintf.h"
 
-# include "ft_lib.h"
-# include "ft_printf.h"
-# include "ft_sprintf.h"
-# include "get_next_line.h"
+static int	count_digits(long int n)
+{
+	int	d;
 
-#endif
+	d = 1;
+	if (n < 0)
+	{
+		n *= -1;
+		d++;
+	}
+	n /= 10;
+	while (n)
+	{
+		n /= 10;
+		d++;
+	}
+	return (d);
+}
+
+int	ft_printnbr_s(char *buf, int n)
+{
+	ft_putnbr_buf(buf, n, 0);
+	return (count_digits(n));
+}
