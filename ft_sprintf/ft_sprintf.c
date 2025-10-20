@@ -63,6 +63,5 @@ int	ft_sprintf(char *buf, const char *str, ...)
 		i++;
 	}
 	va_end(args);
-	buf[count] = '\0';
-	return (count);
+	return (buf[count] = '\0', count);
 }
