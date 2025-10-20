@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:53:54 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:22:28 by ceskelito        ###   ########.fr       */
+/*   Created: 2025/01/07 11:34:10 by rceschel          #+#    #+#             */
+/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_dprintf.h"
 
-# include "ft_lib.h"
-# include "ft_printf.h"
-# include "ft_dprintf.h"
-# include "ft_sprintf.h"
-# include "get_next_line.h"
+int	ft_dprintstr(int fd, char *s)
+{
+	int	i;
 
-#endif
+	if (s == NULL)
+	{
+		write(fd, "(null)", 6);
+		return (6);
+	}
+	i = 0;
+	while (s[i])
+	{
+		write(fd, s + i, 1);
+		i++;
+	}
+	return (i);
+}
