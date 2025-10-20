@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:53:54 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:22:28 by ceskelito        ###   ########.fr       */
+/*   Created: 2025/01/03 16:52:24 by rceschel          #+#    #+#             */
+/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_dprintf.h"
 
-# include "ft_lib.h"
-# include "ft_printf.h"
-# include "ft_dprintf.h"
-# include "ft_sprintf.h"
-# include "get_next_line.h"
+int	ft_dputptr(int fd, unsigned long n, int count)
+{
+	char	digit;
+	char	*base;
 
-#endif
+	base = "0123456789abcdef";
+	if (n < 16)
+	{
+		digit = base[n];
+		write(fd, &digit, 1);
+		count++;
+		return (count);
+	}
+	digit = base[n % 16];
+	count = ft_dputptr(fd, n / 16, count + 1);
+	write(fd, &digit, 1);
+	return (count);
+}

@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_count_digit_base.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:53:54 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:22:28 by ceskelito        ###   ########.fr       */
+/*   Created: 2025/01/03 16:54:54 by rceschel          #+#    #+#             */
+/*   Updated: 2025/01/04 16:30:23 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	count_digit_base(long nbr, int base_size)
+{
+	int	i;
 
-# include "ft_lib.h"
-# include "ft_printf.h"
-# include "ft_dprintf.h"
-# include "ft_sprintf.h"
-# include "get_next_line.h"
-
-#endif
+	i = 0;
+	if (nbr == 0)
+		return (1);
+	if (nbr < 0)
+	{
+		nbr *= -1;
+		i++;
+	}
+	while (nbr > 0)
+	{
+		nbr /= base_size;
+		i++;
+	}
+	return (i);
+}

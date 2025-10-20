@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rceschel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:53:54 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:22:28 by ceskelito        ###   ########.fr       */
+/*   Created: 2024/12/26 15:51:55 by rceschel          #+#    #+#             */
+/*   Updated: 2025/01/03 17:03:16 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <unistd.h>
 
-# include "ft_lib.h"
-# include "ft_printf.h"
-# include "ft_dprintf.h"
-# include "ft_sprintf.h"
-# include "get_next_line.h"
+void	ft_dputunbr(int fd, unsigned int n)
+{
+	char	digit;
 
-#endif
+	if (n < 10)
+	{
+		digit = n + '0';
+		write(fd, &digit, 1);
+		return ;
+	}
+	digit = (n % 10) + '0';
+	ft_dputunbr(fd, n / 10);
+	write(fd, &digit, 1);
+}

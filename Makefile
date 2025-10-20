@@ -2,6 +2,7 @@ include mk.var.local/Makefile
 
 include ft_lib/mk.var/Makefile
 include ft_printf/mk.var/Makefile
+include ft_dprintf/mk.var/Makefile
 include ft_sprintf/mk.var/Makefile
 include get_next_line/mk.var/Makefile
 
@@ -9,6 +10,7 @@ NAME		= libft.a
 
 OBJS		= $(addprefix ft_lib/, $(FTLIB_OBJS)) \
 			$(addprefix ft_printf/, $(PF_OBJS)) \
+			$(addprefix ft_dprintf/, $(DPF_OBJS)) \
 			$(addprefix ft_sprintf/, $(SPF_OBJS)) \
 			$(addprefix get_next_line/, $(GNL_OBJS))
 			
