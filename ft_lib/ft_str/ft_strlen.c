@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rceschel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:08:35 by rceschel          #+#    #+#             */
-/*   Updated: 2024/07/19 11:15:06 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/11/05 17:49:37 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i++] != '\0')
-		;
-	return (--i);
+	while (str && str[i] != '\0')
+		i++;
+	return (i);
 }
