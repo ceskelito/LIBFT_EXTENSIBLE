@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 15:42:23 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/12 15:43:57 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:09:24 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				**ft_split(char const *s, char c);
+char				**ft_split_func(const char *s, int (*is_sep)(int));
 
 /*FT_TO*/
 int					ft_toupper(int c);

@@ -18,7 +18,7 @@ FTLIB_STR 	= ft_putstr_fd.c ft_strdup.c ft_strlcat.c 	\
 		ft_striteri.c ft_strlcpy.c ft_strncmp.c 	\
 		ft_strtrim.c ft_strchr.c ft_strjoin.c 		\
 		ft_strlen.c ft_strnstr.c ft_substr.c		\
-		ft_strcmp.c ft_strjoin_multi.c
+		ft_strcmp.c ft_strjoin_multi.c ft_split_func.c
 
 FTLIB_TO 	= ft_atoi.c ft_itoa.c ft_tolower.c ft_toupper.c ft_atol.c
 
