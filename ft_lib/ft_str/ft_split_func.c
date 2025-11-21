@@ -6,14 +6,14 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 11:06:37 by rceschel          #+#    #+#             */
-/*   Updated: 2025/11/21 17:09:18 by rceschel         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:12:55 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_lib.h"
 #include <stdlib.h>
 
-static int	count_word(const char *str, int (*is_sep)(char))
+static int	count_word(const char *str, int (*is_sep)(int))
 {
 	int	i;
 	int	wn;
@@ -33,7 +33,7 @@ static int	count_word(const char *str, int (*is_sep)(char))
 	return (wn);
 }
 
-static void	set_words_limits(const char *str, int (*is_sep)(char), int *start, int *len)
+static void	set_words_limits(const char *str, int (*is_sep)(int), int *start, int *len)
 {
 	int	i;
 	int	w;
