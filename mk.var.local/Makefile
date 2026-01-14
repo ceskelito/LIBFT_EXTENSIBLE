@@ -1,6 +1,6 @@
 ROOT := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-CC 			= cc
+CC 			= gcc
 AR 			= ar -rcs
 RM 			= rm -f
 MKDIR 		= mkdir -p
