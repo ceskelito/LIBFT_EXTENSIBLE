@@ -16,7 +16,7 @@ FT_PRINTF_OBJS	= $(addprefix $(LIBFT_ROOT)/ft_printf/,		$(PF_OBJS))
 FT_SPRINTF_OBJS	= $(addprefix $(LIBFT_ROOT)/ft_sprintf/,	$(SPF_OBJS))
 FT_GNL_OBJS		= $(addprefix $(LIBFT_ROOT)/get_next_line/,	$(GNL_OBJS))
 
-LIBFT_INC     = $(LIBFT_ROOT)/headers
+LIBFT_INCS    = $(LIBFT_ROOT)/headers
 LIBFT_SRCS		= $(FT_LIB_SRCS) $(FT_PRINTF_SRCS) $(FT_SPRINTF_SRCS) $(FT_GNL_SRCS)
 LIBFT_OBJS		= $(LIBFT_ROOT) $(FT_LIB_OBJS) $(FT_PRINTF_OBJS) $(FT_SPRINTF_OBJS) $(FT_GNL_OBJS)
 
