@@ -6,11 +6,11 @@
 /*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:33:59 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
+/*   Updated: 2026/02/07 17:14:14 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_printf_internal.h"
 
 void	ft_putnbr_hex(unsigned int nbr, const char hex_case)
 {

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:57:45 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
+/*   Updated: 2026/02/07 17:15:01 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf_internal.h"
 #include "ft_printf.h"
 #include <stdarg.h>
 
