@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ceskelito <ceskelito@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:33:59 by rceschel          #+#    #+#             */
-/*   Updated: 2025/07/12 16:09:29 by ceskelito        ###   ########.fr       */
+/*   Updated: 2026/02/07 17:20:23 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_dprintf.h"
+#include "ft_dprintf_internal.h"
 
 void	ft_dputnbr_hex(int fd, unsigned int nbr, const char hex_case)
 {
