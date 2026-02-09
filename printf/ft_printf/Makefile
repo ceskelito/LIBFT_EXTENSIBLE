@@ -1,13 +1,14 @@
-include ../mk.var.local/Makefile
-include mk.var/Makefile  
+include ../../mk.var.local/Makefile
+include ../printf.var.mk
 
 NAME = libftprintf.a
 
-OBJS_DIR = $(PF_OBJS_DIR)
+OBJS_DIR = objs
 
-SRCS	= 	$(PF_SRCS)
+SRCS	= 	ft_printf.c \
+			$(PF_SRCS)
 
-OBJS = $(addprefix $(OBJS_DIR)/, $(notdir $(SRCS:.c=.o)))
+OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
 vpath %.c $(sort $(dir $(SRCS)))
 
