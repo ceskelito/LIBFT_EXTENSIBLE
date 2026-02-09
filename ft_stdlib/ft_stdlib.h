@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lib.h                                           :+:      :+:    :+:   */
+/*   ft_stdlib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 15:42:23 by rceschel          #+#    #+#             */
-/*   Updated: 2025/11/21 17:09:24 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 12:56:47 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIB_H
-# define FT_LIB_H
+#ifndef FT_STDLIB_H
+# define FT_STDLIB_H
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>

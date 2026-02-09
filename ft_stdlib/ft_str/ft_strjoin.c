@@ -6,11 +6,11 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:59:41 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/12 14:39:53 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 12:57:37 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_lib.h"
+#include "../ft_stdlib.h"
 #include <string.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)

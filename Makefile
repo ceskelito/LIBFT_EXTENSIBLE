@@ -8,7 +8,7 @@ include get_next_line/mk.var/Makefile
 
 NAME		= libft.a
 
-OBJS		= $(addprefix ft_lib/, $(FTLIB_OBJS)) \
+OBJS		= $(addprefix ft_stdlib/, $(FTLIB_OBJS)) \
 			$(addprefix ft_printf/, $(PF_OBJS)) \
 			$(addprefix ft_dprintf/, $(DPF_OBJS)) \
 			$(addprefix ft_sprintf/, $(SPF_OBJS)) \

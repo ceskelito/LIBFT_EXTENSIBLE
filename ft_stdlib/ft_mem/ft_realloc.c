@@ -6,11 +6,11 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:46:25 by rceschel          #+#    #+#             */
-/*   Updated: 2025/11/05 11:48:21 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 12:57:37 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_lib.h" // ft_memcpy
+#include "../ft_stdlib.h" // ft_memcpy
 #include <stdlib.h>
 
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)

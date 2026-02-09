@@ -6,11 +6,11 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 11:06:37 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/12 15:45:52 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 12:57:37 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_lib.h"
+#include "../ft_stdlib.h"
 #include <stdlib.h>
 
 static int	count_word(const char *str, char sep)

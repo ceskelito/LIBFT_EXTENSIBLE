@@ -6,11 +6,11 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 18:32:46 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/04 10:46:45 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 12:57:37 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_lib.h"
+#include "../ft_stdlib.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

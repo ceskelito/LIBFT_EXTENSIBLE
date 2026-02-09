@@ -6,11 +6,11 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:43:26 by rceschel          #+#    #+#             */
-/*   Updated: 2025/03/04 10:46:45 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 12:57:37 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_lib.h"
+#include "../ft_stdlib.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
