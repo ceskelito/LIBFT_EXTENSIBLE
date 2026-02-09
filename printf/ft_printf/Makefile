@@ -3,14 +3,16 @@ include ../printf.var.mk
 
 NAME = libftprintf.a
 
-OBJS_DIR = objs
+SRCS 		= ft_printf.c
 
-SRCS	= 	ft_printf.c \
-			$(PF_SRCS)
+SHARED_SRCS	= $(PF_PRINT_SRCS) 	\
+			$(PF_UTILS_SRCS)
 
-OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
+OBJS_DIR 		= objs
+SHARED_OBJS_DIR = $(TOP)/objs
 
-vpath %.c
+OBJS 		= $(addprefix $(OBJS_DIR)/, 		$(SRCS:.c=.o))
+SHARED_OBJS = $(addprefix $(SHARED_OBJS_DIR)/,	$(SHARED_SRCS:.c=.o))
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -I. -c $< -o $@

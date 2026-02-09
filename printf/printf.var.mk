@@ -18,7 +18,7 @@ PF_UTILS_SRCS = ft_count_digit_base.c 	\
 vpath %.c 	$(TOP)/print	\
 			:$(TOP)/utils
 
-PF_SRCS	= 	$(addprefix print/, $(PF_PRINT_SRCS)) \
-			$(addprefix utils/, $(PF_UTILS_SRCS))
+PF_SRCS	= 	$(PF_PRINT_SRCS) \
+			$(PF_UTILS_SRCS)
 
 PF_OBJS = $(addprefix $(PF_OBJS_DIR)/, $(notdir $(PF_SRCS:.c=.o)))
