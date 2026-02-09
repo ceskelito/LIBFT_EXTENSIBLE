@@ -1,6 +1,6 @@
 include mk.var.local/Makefile
 
-include ft_lib/mk.var/Makefile
+include ft_stdlib/mk.var/Makefile
 include ft_printf/mk.var/Makefile
 include ft_dprintf/mk.var/Makefile
 include ft_sprintf/mk.var/Makefile
