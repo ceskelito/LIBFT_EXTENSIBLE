@@ -6,11 +6,12 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 13:47:26 by rceschel          #+#    #+#             */
-/*   Updated: 2025/02/18 13:12:29 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/09 13:02:41 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "gnl_internal.h"
 
 char	*get_next_line(int fd)
 {
