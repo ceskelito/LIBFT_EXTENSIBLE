@@ -3,11 +3,11 @@ include mk.var/Makefile
 
 NAME 		= libftlib.a
 
-OBJS_DIR	= $(FTLIB_OBJS_DIR)
-OBJS		= $(FTLIB_OBJS)
+OBJS_DIR	= $(FTSTD_OBJS_DIR)
+OBJS		= $(FTSTD_OBJS)
 
 # Setting the sources path
-vpath %.c $(sort $(dir $(FTLIB_SRCS)))
+vpath %.c $(sort $(dir $(FTSTD_SRCS)))
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

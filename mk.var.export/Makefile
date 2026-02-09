@@ -6,12 +6,12 @@ include $(LIBFT_ROOT)/ft_printf/mk.var/Makefile
 include $(LIBFT_ROOT)/ft_sprintf/mk.var/Makefile
 include $(LIBFT_ROOT)/get_next_line/mk.var/Makefile
 
-FT_STDLIB_SRCS	= $(addprefix $(LIBFT_ROOT)/ft_stdlib/,		$(FTLIB_SRCS))
+FT_STDLIB_SRCS	= $(addprefix $(LIBFT_ROOT)/ft_stdlib/,		$(FTSTD_SRCS))
 FT_PRINTF_SRCS	= $(addprefix $(LIBFT_ROOT)/ft_printf/,		$(PF_SRCS))
 FT_SPRINTF_SRCS	= $(addprefix $(LIBFT_ROOT)/ft_sprintf/,	$(SPF_SRCS))
 FT_GNL_SRCS		= $(addprefix $(LIBFT_ROOT)/get_next_line/,	$(GNL_SRCS))
 
-FT_STDLIB_OBJS	= $(addprefix $(LIBFT_ROOT)/ft_stdlib/,		$(FTLIB_OBJS))
+FT_STDLIB_OBJS	= $(addprefix $(LIBFT_ROOT)/ft_stdlib/,		$(FTSTD_OBJS))
 FT_PRINTF_OBJS	= $(addprefix $(LIBFT_ROOT)/ft_printf/,		$(PF_OBJS))
 FT_SPRINTF_OBJS	= $(addprefix $(LIBFT_ROOT)/ft_sprintf/,	$(SPF_OBJS))
 FT_GNL_OBJS		= $(addprefix $(LIBFT_ROOT)/get_next_line/,	$(GNL_OBJS))
