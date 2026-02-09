@@ -5,7 +5,7 @@ AR 			= ar -rcs
 RM 			= rm -f
 MKDIR 		= mkdir -p
 CFLAGS 		= -Wall -Werror -Wextra -fPIC
-INCLUDES	= -I$(ROOT)/headers
+INCLUDES	= -I$(ROOT)/includes
 
 # ──────────────────────── #
 #        ANSI COLORS       #
