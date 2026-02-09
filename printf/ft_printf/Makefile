@@ -10,7 +10,7 @@ SRCS	= 	ft_printf.c \
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
-vpath %.c $(sort $(dir $(SRCS)))
+vpath %.c
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR)
 	@$(CC) $(CFLAGS) $(INCLUDES) -I. -c $< -o $@
