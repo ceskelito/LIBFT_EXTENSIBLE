@@ -1,7 +1,7 @@
 include ../mk.var.local/Makefile
 include mk.var/Makefile  
 
-NAME = libftsprintf.a
+NAME = libft_sprintf.a
 
 OBJS_DIR = $(SPF_OBJS_DIR)
 

@@ -1,7 +1,7 @@
 include ../mk.var.local/Makefile
 include mk.var/Makefile  
 
-NAME = libftdprintf.a
+NAME = libft_dprintf.a
 
 OBJS_DIR = $(DPF_OBJS_DIR)
 

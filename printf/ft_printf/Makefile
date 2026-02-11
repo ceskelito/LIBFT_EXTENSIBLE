@@ -1,7 +1,7 @@
 include ../../mk.var.local/Makefile
 include ../printf.var.mk
 
-NAME = libftprintf.a
+NAME = libft_printf.a
 
 SRCS 		= ft_printf.c
 
