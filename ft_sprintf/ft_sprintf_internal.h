@@ -6,12 +6,12 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 17:25:35 by rceschel          #+#    #+#             */
-/*   Updated: 2026/02/07 17:26:06 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/11 15:40:26 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_SPRINTF_H
-# define FT_SPRINTF_H
+#ifndef FT_SPRINTF_INTERNAL_H
+# define FT_SPRINTF_INTERNAL_H
 
 # include <stdarg.h>
 # include <stdlib.h>
