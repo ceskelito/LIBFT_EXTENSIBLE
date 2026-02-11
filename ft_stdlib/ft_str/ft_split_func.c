@@ -6,7 +6,7 @@
 /*   By: rceschel <rceschel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 11:06:37 by rceschel          #+#    #+#             */
-/*   Updated: 2026/02/09 12:57:37 by rceschel         ###   ########.fr       */
+/*   Updated: 2026/02/11 15:42:26 by rceschel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ static int	count_word(const char *str, int (*is_sep)(int))
 	return (wn);
 }
 
-static void	set_words_limits(const char *str, int (*is_sep)(int), int *start, int *len)
+static void	set_words_limits(const char *str,
+			int (*is_sep)(int), int *start, int *len)
 {
 	int	i;
 	int	w;
